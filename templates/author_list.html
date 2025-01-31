@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author list</title>
+</head>
+<body>
+    {% for authors in aj %}
+        {{ authors.name }} 
+        {{ authors.email }} 
+        <a href="{% url 'delete_author' authors.pk %}">Delet</a>
+        <a href="{% url 'update_author' authors.pk %}">update</a><br>
+
+    {% endfor %} <br> <br>
+
+    <a href="{% url 'create_author' %}">Create</a>
+    
+
+
+</body>
+</html>

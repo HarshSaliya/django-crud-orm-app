@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloglist</title>
+</head>
+<body>
+    {% for i in blog %}
+
+    {{ i.name }} ----
+    {{ i.tagline }}
+    <a href="{% url 'delete_blog' i.pk %}">Delete</a>
+    <a href="{% url 'update_blog' i.pk %}">update</a><br>
+
+    {% endfor %}
+
+    <a href="{% url 'create_blog'  %}">Create new blog</a>
+</body>
+</html>
