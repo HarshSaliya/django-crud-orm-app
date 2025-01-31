@@ -24,6 +24,12 @@ class AuthorForm(forms.ModelForm):
         fields = '__all__'
 
 
+class BlogForm(forms.ModelForm):
+    class Meta:
+        model = Blog
+        fields = '__all__'
+
+
 class CreateUser(UserCreationForm) :
 
     class Meta:
@@ -39,7 +45,3 @@ class LoginUser(AuthenticationForm):
 
 
 
-class BlogForm(forms.ModelForm):
-    class Meta:
-        model = Blog
-        fields = '__all__'
